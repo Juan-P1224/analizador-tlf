@@ -1,7 +1,9 @@
 package modelo
 
+// Categoria representa las categorías léxicas
 type Categoria int
 
+// Definición de las categorías
 const (
 	NO_RECONOCIDO Categoria = iota
 	ENTERO
@@ -15,4 +17,14 @@ const (
 	OPERADOR_RELACIONAL
 	OPERADOR_LOGICO
 	OPERADOR_INCREMENTO
+	NUMERO_NATURAL
+	NUMERO_REAL
+	OPERADOR_ASIGNACION
+	PARENTESIS_APERTURA
+	PARENTESIS_CIERRE
+	LLAVE_APERTURA
+	LLAVE_CIERRE
+	TERMINAL
+	SEPARADOR
+	HEXADECIMAL
 )
