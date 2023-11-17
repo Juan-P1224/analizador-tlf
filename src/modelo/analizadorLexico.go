@@ -300,8 +300,9 @@ func (al *AnalizadorLexico) extraerPalabraReservada(indice int) *Token {
 
 // Agrega a Categoria las cadenas de caracteres
 func (al *AnalizadorLexico) extraerCadenaCaracteres(indice int) *Token {
-	if al.CodigoFuente[indice] == '"' {
+	if indice < len(al.CodigoFuente) && al.CodigoFuente[indice] == '"' {
 		posicion := indice + 1
+		indice++
 		for indice < len(al.CodigoFuente) && al.CodigoFuente[indice] != '"' {
 			indice++
 		}

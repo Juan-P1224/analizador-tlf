@@ -26,7 +26,14 @@ func main() {
 	// Imprimir mensaje de depuración
 	fmt.Println("Antes de Analizar")
 
-	codigoFuente := "892892asas"
+	codigoFuente := `
+	892892
+	asas
+	// Esto es un comentario
+	float variable = 3.14
+	"cadena de caracteres"
+	== != <= >= < >
+	`
 	an := modelo.NewAnalizadorLexico(codigoFuente)
 	an.Analizar()
 
